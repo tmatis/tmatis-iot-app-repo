@@ -16,6 +16,8 @@ gitlab:
     enabled: false
   certmanager:
     install: false
+  gitlab-runner:
+    install: false
   gitlab:
     webservice:
       minReplicas: 1
