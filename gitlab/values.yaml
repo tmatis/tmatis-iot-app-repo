@@ -1,0 +1,39 @@
+gitlab:
+  upgradeCheck:
+    enabled: false
+  global:
+    edition: ce
+    shell:
+      port: 30022
+    hosts:
+      domain: tmatis.local
+      externalUrl: http://gitlab.tmatis.local
+      https: false
+    ingress:
+      enabled: false
+      configureCertmanager: false
+  nginx-ingress:
+    enabled: false
+  certmanager:
+    install: false
+  gitlab:
+    webservice:
+      minReplicas: 1
+      maxReplicas: 1
+      replicaCount: 1
+    sidekiq:
+      minReplicas: 1
+      maxReplicas: 1
+      replicaCount: 1
+    toolbox:
+      minReplicas: 1
+      maxReplicas: 1
+      replicaCount: 1
+    gitlab-shell:
+      minReplicas: 1
+      maxReplicas: 1
+      replicaCount: 1
+      service:
+        type: NodePort
+        nodePort: 30022
+        externalPort: 30022

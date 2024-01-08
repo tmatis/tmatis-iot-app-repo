@@ -1,0 +1,15 @@
+apiVersion: v2
+name: gitlab-iot
+description: Gitlab distribution for iot
+version: 0.1.0
+type: application
+
+maintainers:
+  - name: tmatis
+    email: tmatis@student.42.fr
+
+dependencies:
+  - name: gitlab
+    version: 7.7.0
+    repository: https://charts.gitlab.io/
+    alias: gitlab
